@@ -17,3 +17,31 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://deloyweb.herokuapp.com/login')
+
+WebUI.setText(findTestObject('Object Repository/Mattermost_login/Page_Mattermost/input_All team communication in one place, _dcc84b'), 
+    'oldtester@gmail.com')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Mattermost_login/Page_Mattermost/input_All team communication in one place, _a3edc6'), 
+    'qj1BTyeJoE60NzCSyvy8/Q==')
+
+WebUI.click(findTestObject('Object Repository/Mattermost_login/Page_Mattermost/span_Sign in'))
+
+WebUI.click(findTestObject('Mattermost_dashboard/Page_Town Square - HCMUS Mattermost/textarea_(optional)_newChannelPurpose'))
+
+WebUI.click(findTestObject('Mattermost_dashboard/Page_Town Square - HCMUS Mattermost/input_Type_channelType'))
+
+WebUI.setText(findTestObject('Mattermost_dashboard/Page_Town Square - HCMUS Mattermost/input_Name_newChannelName'), name)
+
+WebUI.setText(findTestObject('Mattermost_dashboard/Page_Town Square - HCMUS Mattermost/textarea_(optional)_newChannelPurpose'), 
+    purpose)
+
+WebUI.click(findTestObject('Mattermost_dashboard/Page_Town Square - HCMUS Mattermost/span_Create Channel'))
+
+WebUI.verifyElementPresent(findTestObject('Mattermost_dashboard/Page_Test channel - HCMUS Mattermost/div_Beginning of Test channelThis is the st_5cb850'), 
+    10)
+
+WebUI.closeBrowser()
+

@@ -44,4 +44,31 @@
          <variableId>09721fc7-8804-4482-aad0-d877855e107d</variableId>
       </variableLink>
    </testCaseLink>
+   <testCaseLink>
+      <guid>63343c0b-fc1a-4fd3-8736-0810025ee2b5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Data Driven Test Cases/Test Case 36</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>c818af1b-0679-4427-ad4d-4998a8f5a6c5</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/CSV Create Public Channel</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>c818af1b-0679-4427-ad4d-4998a8f5a6c5</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>name</value>
+         <variableId>75bda932-fd7d-40d5-b674-c6f6c161fffa</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>c818af1b-0679-4427-ad4d-4998a8f5a6c5</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>purpose</value>
+         <variableId>b8f76300-8093-4072-a145-2d7b1a3b4431</variableId>
+      </variableLink>
+   </testCaseLink>
 </TestSuiteEntity>

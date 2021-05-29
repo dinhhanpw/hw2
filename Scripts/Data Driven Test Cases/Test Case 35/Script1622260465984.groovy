@@ -30,7 +30,7 @@ WebUI.setText(findTestObject('Object Repository/Mattermost_signup/input_password
 
 WebUI.click(findTestObject('Object Repository/Mattermost_login/button_Sign in'))
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Mattermost_login/notification'), 10)
+WebUI.verifyElementPresent(findTestObject('Mattermost_login/notification'), 10)
 
 WebUI.closeBrowser()
 
