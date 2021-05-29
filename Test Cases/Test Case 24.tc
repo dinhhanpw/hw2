@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Case 24</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ba128b12-878e-49b7-9799-9c8de25da5e8</testCaseGuid>
+   <variable>
+      <defaultValue>'task'</defaultValue>
+      <description></description>
+      <id>6718230b-fe8d-4abc-98f0-56d075ab3f15</id>
+      <masked>false</masked>
+      <name>keyword</name>
+   </variable>
+</TestCaseEntity>

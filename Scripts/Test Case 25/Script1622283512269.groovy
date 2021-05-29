@@ -10,6 +10,8 @@ import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
+import com.kms.katalon.core.testobject.ConditionType
+import com.kms.katalon.core.testobject.SelectorMethod
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
@@ -17,21 +19,43 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-// tester account not exists, using oldtester
-if (isOpenBrowser) {
-    WebUI.openBrowser('')
+if(isLogin)
+{
+	WebUI.callTestCase(findTestCase('Test Case 15'), [('username') : 'oldtester@gmail.com', ('password') : 'Hcmus2017!', ('isCloseBrowser') : false],
+		FailureHandling.STOP_ON_FAILURE)
 }
 
-WebUI.navigateToUrl('https://deloyweb.herokuapp.com/login')
 
-WebUI.setText(findTestObject('Object Repository/Mattermost_login/input_loginId'), username)
+TestObject messageObject = new TestObject()
 
-WebUI.setText(findTestObject('Object Repository/Mattermost_login/input_password'), password)
+messageObject.setSelectorMethod(SelectorMethod.BASIC)
 
-WebUI.click(findTestObject('Object Repository/Mattermost_login/button_Sign in'))
+messageObject.addProperty('tag', ConditionType.EQUALS, 'p', true)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Mattermost_login/button_account dropdown'), 10)
+messageObject.addProperty('text', ConditionType.EQUALS, message, true)
 
-if (isCloseBrowser) {
-    WebUI.closeBrowser()
-}
+WebUI.mouseOver(messageObject)
+
+TestObject actionsButtonObject = new TestObject()
+
+actionsButtonObject.setSelectorMethod(SelectorMethod.BASIC)
+
+actionsButtonObject.addProperty('tag', ConditionType.EQUALS, 'button', true)
+
+actionsButtonObject.addProperty('aria-label', ConditionType.EQUALS, 'more actions', true)
+
+WebUI.click(actionsButtonObject)
+
+TestObject deleteButtonObject = new TestObject()
+
+deleteButtonObject.setSelectorMethod(SelectorMethod.BASIC)
+
+deleteButtonObject.addProperty('tag', ConditionType.EQUALS, 'button', true)
+
+deleteButtonObject.addProperty('text', ConditionType.EQUALS, 'Delete', true)
+
+WebUI.click(deleteButtonObject)
+
+WebUI.click(deleteButtonObject)
+
+WebUI.closeBrowser()

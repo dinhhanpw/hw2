@@ -10,6 +10,8 @@ import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
+import com.kms.katalon.core.testobject.ConditionType as ConditionType
+import com.kms.katalon.core.testobject.SelectorMethod as SelectorMethod
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
@@ -17,21 +19,13 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-// tester account not exists, using oldtester
-if (isOpenBrowser) {
-    WebUI.openBrowser('')
-}
+WebUI.callTestCase(findTestCase('Test Case 15'), [('username') : 'oldtester@gmail.com', ('password') : 'Hcmus2017!', ('isCloseBrowser') : false], 
+    FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('https://deloyweb.herokuapp.com/login')
+WebUI.click(findTestObject('Object Repository/Mattermost_channel/button_icons dropdown'))
 
-WebUI.setText(findTestObject('Object Repository/Mattermost_login/input_loginId'), username)
+WebUI.click(findTestObject('Object Repository/Mattermost_channel/img_chatbox like icon'))
 
-WebUI.setText(findTestObject('Object Repository/Mattermost_login/input_password'), password)
+WebUI.sendKeys(findTestObject('Object Repository/Mattermost_channel/textarea_chatbar'), Keys.chord(Keys.ENTER))
 
-WebUI.click(findTestObject('Object Repository/Mattermost_login/button_Sign in'))
-
-WebUI.verifyElementPresent(findTestObject('Object Repository/Mattermost_login/button_account dropdown'), 10)
-
-if (isCloseBrowser) {
-    WebUI.closeBrowser()
-}
+WebUI.closeBrowser()

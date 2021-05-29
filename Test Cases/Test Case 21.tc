@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Case 21</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c56261e4-396e-4ac0-a673-f85f6fb0d306</testCaseGuid>
+   <variable>
+      <defaultValue>'channel 1'</defaultValue>
+      <description></description>
+      <id>89e2d4f3-5091-4300-8c21-202e76287e7a</id>
+      <masked>false</masked>
+      <name>channelName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Ok! Your task is ...'</defaultValue>
+      <description></description>
+      <id>84fe85a2-e03e-4c8c-b121-4770136f4510</id>
+      <masked>false</masked>
+      <name>message</name>
+   </variable>
+</TestCaseEntity>

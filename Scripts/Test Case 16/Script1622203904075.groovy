@@ -10,6 +10,8 @@ import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
+import com.kms.katalon.core.testobject.ConditionType
+import com.kms.katalon.core.testobject.SelectorMethod
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
@@ -17,21 +19,26 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-// tester account not exists, using oldtester
-if (isOpenBrowser) {
-    WebUI.openBrowser('')
-}
+WebUI.callTestCase(findTestCase('Test Case 15'), [('username') : 'oldtester@gmail.com', ('password') : 'Hcmus2017!', ('isCloseBrowser') : false], 
+    FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('https://deloyweb.herokuapp.com/login')
+//WebUI.click(findTestObject('Object Repository/Mattermost_channel/button_add new channel'))
+//
+//WebUI.click(findTestObject('Object Repository/Mattermost_channel/option_private channel'))
+//
+//WebUI.setText(findTestObject('Object Repository/Mattermost_channel/input_channel name'), channelName)
+//
+//WebUI.setText(findTestObject('Object Repository/Mattermost_channel/textarea_purpose'), channelPurpose)
+//
+//WebUI.click(findTestObject('Object Repository/Mattermost_channel/button_create channel'))
 
-WebUI.setText(findTestObject('Object Repository/Mattermost_login/input_loginId'), username)
+TestObject newChannel = new TestObject()
 
-WebUI.setText(findTestObject('Object Repository/Mattermost_login/input_password'), password)
+newChannel.setSelectorMethod(SelectorMethod.BASIC)
+newChannel.addProperty('tag', ConditionType.EQUALS, "a", true)
+newChannel.addProperty('class', ConditionType.EQUALS, "sidebar-item", true)
+newChannel.addProperty('text', ConditionType.EQUALS, channelName, true)
 
-WebUI.click(findTestObject('Object Repository/Mattermost_login/button_Sign in'))
+WebUI.verifyElementPresent(newChannel, 10)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Mattermost_login/button_account dropdown'), 10)
-
-if (isCloseBrowser) {
-    WebUI.closeBrowser()
-}
+WebUI.closeBrowser()

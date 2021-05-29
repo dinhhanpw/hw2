@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Case 29</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8e78b783-4f9b-48e3-b376-d56e4c58188c</testCaseGuid>
+   <variable>
+      <defaultValue>'channel 1'</defaultValue>
+      <description></description>
+      <id>4836274c-825e-4b0d-904d-9de81dfb8486</id>
+      <masked>false</masked>
+      <name>channelName</name>
+   </variable>
+</TestCaseEntity>

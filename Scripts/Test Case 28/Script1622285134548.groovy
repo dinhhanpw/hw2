@@ -10,6 +10,8 @@ import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
+import com.kms.katalon.core.testobject.ConditionType as ConditionType
+import com.kms.katalon.core.testobject.SelectorMethod as SelectorMethod
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
@@ -17,21 +19,31 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-// tester account not exists, using oldtester
-if (isOpenBrowser) {
-    WebUI.openBrowser('')
-}
+WebUI.callTestCase(findTestCase('Test Case 15'), [('username') : 'oldtester@gmail.com', ('password') : 'Hcmus2017!', ('isCloseBrowser') : false], 
+    FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('https://deloyweb.herokuapp.com/login')
+TestObject channelObject = new TestObject()
 
-WebUI.setText(findTestObject('Object Repository/Mattermost_login/input_loginId'), username)
+channelObject.setSelectorMethod(SelectorMethod.BASIC)
 
-WebUI.setText(findTestObject('Object Repository/Mattermost_login/input_password'), password)
+channelObject.addProperty('tag', ConditionType.EQUALS, 'a', true)
 
-WebUI.click(findTestObject('Object Repository/Mattermost_login/button_Sign in'))
+channelObject.addProperty('class', ConditionType.EQUALS, 'sidebar-item', true)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Mattermost_login/button_account dropdown'), 10)
+channelObject.addProperty('text', ConditionType.EQUALS, channelName, true)
 
-if (isCloseBrowser) {
-    WebUI.closeBrowser()
-}
+WebUI.click(channelObject)
+
+WebUI.click(findTestObject('Object Repository/Mattermost_channel/button_features channel dropdown'))
+
+TestObject viewButtonObject = new TestObject()
+
+viewButtonObject.setSelectorMethod(SelectorMethod.BASIC)
+
+viewButtonObject.addProperty('tag', ConditionType.EQUALS, 'button', true)
+
+viewButtonObject.addProperty('text', ConditionType.EQUALS, 'View Info', true)
+
+WebUI.click(viewButtonObject)
+
+WebUI.closeBrowser()

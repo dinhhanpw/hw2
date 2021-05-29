@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Case 17</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>80fb2baf-49e4-4334-b872-2ddfdb9be60e</testCaseGuid>
+   <variable>
+      <defaultValue>'Testing'</defaultValue>
+      <description></description>
+      <id>0df3d427-ddeb-4fad-839c-86e6a58ef85c</id>
+      <masked>false</masked>
+      <name>channelName</name>
+   </variable>
+   <variable>
+      <defaultValue>'A testing channel'</defaultValue>
+      <description></description>
+      <id>7a1e05fb-81bf-4614-89db-a3a893d6b96c</id>
+      <masked>false</masked>
+      <name>channelPurpose</name>
+   </variable>
+</TestCaseEntity>

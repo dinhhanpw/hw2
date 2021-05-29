@@ -17,21 +17,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-// tester account not exists, using oldtester
-if (isOpenBrowser) {
-    WebUI.openBrowser('')
-}
+WebUI.callTestCase(findTestCase('Test Case 23'), [('channelName') : 'channel 1', ('This message was saved') : 'Ok! Your task is ...', ('isCloseBrowser') : false], 
+    FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('https://deloyweb.herokuapp.com/login')
+WebUI.callTestCase(findTestCase('Test Case 25'), [('message') : 'This message was saved', ('isLogin') : false], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Object Repository/Mattermost_login/input_loginId'), username)
-
-WebUI.setText(findTestObject('Object Repository/Mattermost_login/input_password'), password)
-
-WebUI.click(findTestObject('Object Repository/Mattermost_login/button_Sign in'))
-
-WebUI.verifyElementPresent(findTestObject('Object Repository/Mattermost_login/button_account dropdown'), 10)
-
-if (isCloseBrowser) {
-    WebUI.closeBrowser()
-}

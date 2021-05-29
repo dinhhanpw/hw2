@@ -17,21 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-// tester account not exists, using oldtester
-if (isOpenBrowser) {
-    WebUI.openBrowser('')
-}
+WebUI.callTestCase(findTestCase('Test Case 15'), [('username') : 'oldtester@gmail.com', ('password') : 'Hcmus2017!', ('isCloseBrowser') : false],
+	FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('https://deloyweb.herokuapp.com/login')
+WebUI.click(findTestObject('Object Repository/Mattermost_channel/button_add new channel'))
 
-WebUI.setText(findTestObject('Object Repository/Mattermost_login/input_loginId'), username)
+WebUI.click(findTestObject('Object Repository/Mattermost_channel/option_private channel'))
 
-WebUI.setText(findTestObject('Object Repository/Mattermost_login/input_password'), password)
+WebUI.setText(findTestObject('Object Repository/Mattermost_channel/input_channel name'), channelName)
 
-WebUI.click(findTestObject('Object Repository/Mattermost_login/button_Sign in'))
+WebUI.setText(findTestObject('Object Repository/Mattermost_channel/textarea_purpose'), channelPurpose)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Mattermost_login/button_account dropdown'), 10)
+WebUI.click(findTestObject('Object Repository/Mattermost_channel/button_create channel'))
 
-if (isCloseBrowser) {
-    WebUI.closeBrowser()
-}
+WebUI.verifyElementPresent(findTestObject('Object Repository/Mattermost_channel/notification_name channel'), 10)
+
+WebUI.closeBrowser()

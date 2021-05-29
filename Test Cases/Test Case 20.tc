@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Case 20</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ea1601f3-4a7e-4680-a178-e6c0e15ff6fb</testCaseGuid>
+   <variable>
+      <defaultValue>'channel 1'</defaultValue>
+      <description></description>
+      <id>4de8fc35-5333-4022-83ab-15f2812dd9cd</id>
+      <masked>false</masked>
+      <name>channelName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Hello'</defaultValue>
+      <description></description>
+      <id>10ad48ca-f05f-4dd8-a8bd-97aafb934c14</id>
+      <masked>false</masked>
+      <name>message</name>
+   </variable>
+</TestCaseEntity>
