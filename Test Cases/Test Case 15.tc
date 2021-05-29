@@ -5,4 +5,32 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>48dfcd2d-23e7-44eb-9bd4-ba5cbe1c1f96</testCaseGuid>
+   <variable>
+      <defaultValue>'oldtester@gmail.com'</defaultValue>
+      <description></description>
+      <id>5f9962f2-5c0c-4269-bb97-9a6ed31bb55b</id>
+      <masked>false</masked>
+      <name>username</name>
+   </variable>
+   <variable>
+      <defaultValue>'Hcmus2017!'</defaultValue>
+      <description></description>
+      <id>62a71e56-201b-43b1-b462-02bc3ad690a0</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
+   <variable>
+      <defaultValue>true</defaultValue>
+      <description></description>
+      <id>ee187fa0-d7e4-498c-a057-800b9616e01d</id>
+      <masked>false</masked>
+      <name>isCloseBrowser</name>
+   </variable>
+   <variable>
+      <defaultValue>true</defaultValue>
+      <description></description>
+      <id>b3b8fbc2-25c4-4a31-adab-c15f0e318aea</id>
+      <masked>false</masked>
+      <name>isOpenBrowser</name>
+   </variable>
 </TestCaseEntity>

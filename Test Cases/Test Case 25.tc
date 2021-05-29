@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Case 25</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>058bc0f5-0e2e-4715-991d-b120ebdcacc7</testCaseGuid>
+   <variable>
+      <defaultValue>'This message will be deleted'</defaultValue>
+      <description></description>
+      <id>eb8c0fac-dc4a-46d4-b943-835106eb754a</id>
+      <masked>false</masked>
+      <name>message</name>
+   </variable>
+   <variable>
+      <defaultValue>true</defaultValue>
+      <description></description>
+      <id>02b1fdbe-cdbc-4f69-bca9-60ca8d1331b0</id>
+      <masked>false</masked>
+      <name>isLogin</name>
+   </variable>
+</TestCaseEntity>

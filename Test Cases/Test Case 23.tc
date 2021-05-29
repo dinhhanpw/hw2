@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Case 23</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d4becb44-fe0e-4710-8eff-cd1484a214bd</testCaseGuid>
+   <variable>
+      <defaultValue>'channel 1'</defaultValue>
+      <description></description>
+      <id>7f8253fd-9078-4d17-a1fa-9f52ab8dbbc1</id>
+      <masked>false</masked>
+      <name>channelName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Ok! Your task is ...'</defaultValue>
+      <description></description>
+      <id>ba106058-7016-49e2-88b8-20b1387900e3</id>
+      <masked>false</masked>
+      <name>message</name>
+   </variable>
+   <variable>
+      <defaultValue>true</defaultValue>
+      <description></description>
+      <id>3f7f21b1-4a29-499d-84c4-694259bfb4e9</id>
+      <masked>false</masked>
+      <name>isCloseBrowser</name>
+   </variable>
+</TestCaseEntity>

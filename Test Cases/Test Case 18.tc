@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Case 18</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9f51fc79-cf69-4b33-9c95-39948948ac50</testCaseGuid>
+   <variable>
+      <defaultValue>'supreme-tester'</defaultValue>
+      <description></description>
+      <id>7b479e96-de94-4351-a567-e6de19055406</id>
+      <masked>false</masked>
+      <name>memberName</name>
+   </variable>
+   <variable>
+      <defaultValue>'channel 1'</defaultValue>
+      <description></description>
+      <id>b2469d65-5211-4eb8-b989-11a509b1680a</id>
+      <masked>false</masked>
+      <name>channelName</name>
+   </variable>
+   <variable>
+      <defaultValue>true</defaultValue>
+      <description></description>
+      <id>1facd065-b2f9-41a5-a82b-b6c4ee55fa9b</id>
+      <masked>false</masked>
+      <name>isCloseBrowser</name>
+   </variable>
+</TestCaseEntity>

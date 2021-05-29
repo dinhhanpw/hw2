@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Test Case 16</name>
+   <name>Test Case 20</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>c3d50886-0c13-47df-ab10-ba2d2ff8fbbc</testCaseGuid>
+   <testCaseGuid>ea1601f3-4a7e-4680-a178-e6c0e15ff6fb</testCaseGuid>
    <variable>
       <defaultValue>'channel 1'</defaultValue>
       <description></description>
-      <id>9834b7b1-0250-4572-964b-f5d5db81863f</id>
+      <id>4de8fc35-5333-4022-83ab-15f2812dd9cd</id>
       <masked>false</masked>
       <name>channelName</name>
    </variable>
    <variable>
-      <defaultValue>'A testing channel'</defaultValue>
+      <defaultValue>'Hello'</defaultValue>
       <description></description>
-      <id>6cb6f49f-9be4-4603-9a4d-f4d1d6cd2d01</id>
+      <id>10ad48ca-f05f-4dd8-a8bd-97aafb934c14</id>
       <masked>false</masked>
-      <name>channelPurpose</name>
+      <name>message</name>
    </variable>
 </TestCaseEntity>
